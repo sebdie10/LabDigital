@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div con imagen, título, descripción y botón de descarga</title>
+  <style>
+    .program-info {
+      display: flex;
+      align-items: center;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .program-info img {
+      max-width: 100px;
+      margin-right: 20px;
+    }
+
+    .program-info .info {
+      flex: 1;
+    }
+
+    .program-info h2 {
+      margin-top: 0;
+    }
+
+    .program-info p {
+      margin-bottom: 10px;
+    }
+
+    .download-btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="program-info">
+    <img src="ruta/a/la/imagen.jpg" alt="Activsis">
+    <div class="info">
+      <h2>Activsis</h2>
+      <p>Programa para activar las licencias de Windows.</p>
+      <button class="download-btn" id="downloadBtn">Descargar</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      // Simular descarga de un archivo WinRAR
+      // Cambia 'nombre_archivo.rar' por el nombre del archivo que deseas descargar
+      // Asegúrate de que la ruta sea correcta
+      var link = document.createElement('a');
+      link.setAttribute('href', './programs/Actisis.rar');
+      link.setAttribute('download', 'nombre_archivo.rar');
+      link.click();
+    });
+  </script>
+</body>
+</html>
