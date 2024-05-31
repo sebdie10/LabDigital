@@ -1,6 +1,6 @@
 function descargarRAR(name) {
     // Ruta del archivo RAR
-    var rutaArchivoRAR = `/programs/${name}`;
+    var rutaArchivoRAR = `./programs/${name}`;
   
     // Crear un enlace invisible
     var enlace = document.createElement("a");
